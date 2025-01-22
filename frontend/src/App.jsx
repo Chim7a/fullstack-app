@@ -1,0 +1,29 @@
+import { Route, Routes } from "react-router";
+import "./App.css";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import MarketPlace from "./pages/MarketPlace";
+import MainLayout from "./layout/MainLayout";
+import ProductDetails from "./pages/ProductDetails";
+import Checkout from "./pages/Checkout";
+
+function App() {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+
+        <Route path="marketplace">
+          {/* index here means the first page to be directed to */}
+          <Route index element={<MarketPlace />} />
+          <Route path=":productId" element={<ProductDetails />} />
+        </Route>
+
+        <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
+      </Route>
+    </Routes>
+  );
+}
+
+export default App;
