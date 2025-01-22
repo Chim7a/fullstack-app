@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearUserCart } from "../../features/cart/cartSlice";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import { BACKEND_BASE_URL } from "../../utils/helper";
 
 const PAYSTACK_KEY = import.meta.env.VITE_PAYSTACK_TEST_KEY;
 
@@ -35,15 +36,12 @@ const Payment = ({ checkoutFormData }) => {
         // console.log(cartItems);
 
         // Data to be sent to the backend.
-        const response = await axios.post(
-          "http://localhost:3000/api/v1/order/create",
-          {
-            reference,
-            checkoutFormData,
-            userCartSummary,
-            cartItems,
-          }
-        );
+        const response = await axios.post(`${BACKEND_BASE_URL}/order/create`, {
+          reference,
+          checkoutFormData,
+          userCartSummary,
+          cartItems,
+        });
 
         console.log(response);
 
