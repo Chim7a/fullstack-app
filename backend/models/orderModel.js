@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const oderSchema = new mongoose.Schema(
   {
     transaction_reference: {
-      transction: String,
+      transaction: String,
       status: String,
       trxref: String,
       message: String,
@@ -22,8 +22,8 @@ const oderSchema = new mongoose.Schema(
       type: String,
       enum: {
         values: ["Pending", "Cancelled", "Completed"],
-        default: "Pending",
       },
+      default: "Pending",
     },
   },
   { timestamps: true }

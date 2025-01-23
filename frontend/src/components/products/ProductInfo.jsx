@@ -5,7 +5,7 @@ import { formatCurrency } from "../../utils/helper";
 import { useDispatch, useSelector } from "react-redux";
 import { addCartItem } from "../../features/cart/cartSlice";
 import { message } from "antd";
-import BackButton from "../../utils/BackButton";
+import BackButton from "../ui/BackButton.jsx";
 
 const ProductInfo = () => {
   const params = useParams();

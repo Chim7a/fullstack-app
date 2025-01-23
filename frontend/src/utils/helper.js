@@ -6,7 +6,7 @@ export function formatCurrency(amount) {
   }).format(amount);
 }
 
-// First link from render.com
+// First link from render.com. Use the .NODE.ENV
 const BACKEND_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://agro-store.onrender.com/api/v1"

@@ -1,7 +1,7 @@
 import React from "react";
 import CartList from "../components/cart/CartList";
 import CartSummary from "../components/cart/CartSummary";
-import BackButton from "../utils/BackButton";
+import BackButton from "../components/ui/BackButton";
 
 const Cart = () => {
   return (
