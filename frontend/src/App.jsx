@@ -6,6 +6,7 @@ import MarketPlace from "./pages/MarketPlace";
 import MainLayout from "./layout/MainLayout";
 import ProductDetails from "./pages/ProductDetails";
 import Checkout from "./pages/Checkout";
+import Admin from "./pages/protected/Admin";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
 
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
+
+        <Route path="admin" element={<Admin />} />
       </Route>
     </Routes>
   );
