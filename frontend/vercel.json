@@ -1,3 +1,1 @@
-// 404 NOT FOUND ERROR Fix. This occurs when a sub route is refreshed and page fails to open.
-
 { "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
