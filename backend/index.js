@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import odersRoute from "./routes/ordersRoutes.js";
 import mongoose from "mongoose";
+import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 // Either use local or global url
@@ -23,6 +24,7 @@ app.use(
 app.use(express.json());
 
 app.use("/api/v1/order", odersRoute);
+app.use("/api/v1/auth", authRoutes);
 
 app.get("/server-health", (req, res) => {
   res.status(200).json({ message: "System is running successfully." });

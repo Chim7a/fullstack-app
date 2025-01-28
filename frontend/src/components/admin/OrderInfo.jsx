@@ -50,14 +50,14 @@ const OrderInfo = ({ orderInformation }) => {
           Order Summary
         </h2>
         <p>
-          <strong className="text-gray-500 text-lg">Total Amount:</strong>
+          <strong className="text-gray-500 text-lg">Total Amount: </strong>
           {formatCurrency(
             orderInformation.user_cart_summary.totalCartItemsCost
           )}
         </p>
 
         <p>
-          <strong className="text-gray-500 text-lg">Number of items:</strong>
+          <strong className="text-gray-500 text-lg">Number of items: </strong>
           {orderInformation.user_cart_summary.totalCartItemsQty}
         </p>
       </div>

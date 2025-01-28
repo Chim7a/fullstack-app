@@ -72,6 +72,7 @@ const getSingleOrderInfo = async (req, res) => {
 
   try {
     const order = await OrderModel.findOne({ _id: orderId });
+
     res.status(200).json({ message: "Successful", data: order });
   } catch (error) {
     res.status(400).json({ message: "Sorry an error occurred", data: error });
