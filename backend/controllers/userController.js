@@ -97,6 +97,7 @@ const loginUser = async (req, res) => {
 
     // To not send password info to frontend
     user.password = undefined;
+
     res.status(200).json({ data: user, status: "success" });
   } catch (error) {
     res.status(400).json({ message: error.message, status: "Failed" });
